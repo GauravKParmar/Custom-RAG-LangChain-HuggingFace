@@ -40,11 +40,13 @@ Once the server is running, interact with the RAG system using HTTP POST request
 
 #### Run via terminal
 1. Run api_app.py
+   This command starts the FastAPI server.
    
    ```bash
    python .\custom_rag\api_app.py
    ```
 2. Run client_app.py
+   This command starts the Streamlit server.
    
    ```bash
    streamlit run .\custom_rag\client_app.py
