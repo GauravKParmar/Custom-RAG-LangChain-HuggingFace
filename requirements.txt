@@ -2,6 +2,7 @@ pymupdf
 langchain-community
 langchain
 langchain-huggingface
+langserve
 accelerate
 torch
 faiss-cpu
@@ -10,3 +11,4 @@ transformers
 streamlit
 numpy
 protobuf
+fastapi
