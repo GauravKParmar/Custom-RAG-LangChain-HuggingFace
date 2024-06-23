@@ -2,7 +2,11 @@ pymupdf
 langchain-community
 langchain
 langchain-huggingface
-torch 
+accelerate
+torch
 faiss-cpu
 segmentation-models
 transformers
+streamlit
+numpy
+protobuf

@@ -4,6 +4,7 @@ from langchain_huggingface import HuggingFaceEmbeddings, HuggingFacePipeline
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import RetrievalQA
 from transformers import pipeline, AutoTokenizer, AutoModelForQuestionAnswering
+import streamlit as st
 
 
 ## CONSTANTS
@@ -110,7 +111,7 @@ def get_qa_instance(llm_model, retriever):
     )
     return qa
 
-
+@st.cache_resource
 def init_custom_rag():
     document = get_pdf_document(DOCUMENT_PATH)
     preprocessed_document = preprocess_document(document)
@@ -134,6 +135,7 @@ def get_answer(qa, query: str) -> str:
 
 if __name__ == "__main__":
     qa = init_custom_rag()
-    query = "Evolution"
-    answer = get_answer(qa, query)
-    print(answer)
+    st.title('Custom RAG based on LangChain and HuggingFace')
+    query=st.text_input("Search the topic u want")
+    if query:
+        st.write(get_answer(qa, query))
