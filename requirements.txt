@@ -1,0 +1,8 @@
+pymupdf
+langchain-community
+langchain
+langchain-huggingface
+torch 
+faiss-cpu
+segmentation-models
+transformers
